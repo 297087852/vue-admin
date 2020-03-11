@@ -1,0 +1,20 @@
+// login
+.login-container {
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+  .login-form {
+    width: 430px;
+    margin: 160px auto 0;
+    .input-icon {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 5;
+    }
+    input {
+      padding-left: 30px;
+    }
+  }
+}
