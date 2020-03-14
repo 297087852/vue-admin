@@ -1,20 +1,35 @@
-// login
-.login-container {
-  .title {
-    font-size: 36px;
-    text-align: center;
-  }
-  .login-form {
-    width: 430px;
-    margin: 160px auto 0;
-    .input-icon {
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      z-index: 5;
+@import '~@/styles/variables';
+
+.app-container {
+  display: flex;
+  //sidebar
+  .sidebar-container {
+    height: 100vh;
+    .sidebar-menu {
+      height: 100%;
+      &:not(.el-menu--collapse) {
+        width: $--sidebar-open-width;
+      }
     }
-    input {
-      padding-left: 30px;
+    .el-menu--collapse {
+      width: $--sidebar-unopen-width;
+    }
+  }
+
+  .main-container {
+    flex: 1;
+    // navbar
+    .navbar-container {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 0 3px 1px #eee;
+      .collapse-menu {
+        font-size: 18px;
+        padding: 0 20px;
+        display: inline-block;
+        cursor: pointer;
+      }
     }
   }
 }

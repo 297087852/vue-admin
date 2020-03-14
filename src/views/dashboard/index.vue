@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard
+    欢迎来到VUE ADMIN!
   </div>
 </template>
 

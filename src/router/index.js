@@ -10,7 +10,13 @@ const routes = [
   },
   {
     path: '/dashboard',
-    component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/dashboard')
+    component: () => import('@/layout'),
+    children: [
+      {
+        path: '',
+        component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/dashboard')
+      }
+    ]
   }
 ]
 

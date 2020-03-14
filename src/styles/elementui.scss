@@ -1,0 +1,11 @@
+// 封装SidebartItem时候多了一层div
+// .el-menu--collapse>.el-menu-item span, .el-menu--collapse>.el-submenu>.el-submenu__title span
+  .el-menu--collapse .el-menu-item span,
+  .el-menu--collapse .el-submenu .el-submenu__title span,
+  .el-menu--collapse .el-submenu__title i {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: inline-block;
+  }
