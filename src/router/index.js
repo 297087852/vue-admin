@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+const layout = () => import('@/layout')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,10 +12,11 @@ const routes = [
   },
   {
     path: '/dashboard',
-    component: () => import('@/layout'),
+    component: layout,
     children: [
       {
         path: '',
+        name: '首页',
         component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/dashboard')
       }
     ]

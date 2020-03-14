@@ -30,6 +30,41 @@
         display: inline-block;
         cursor: pointer;
       }
+      .right-menu {
+        float: right;
+        &-item {
+          padding: 0 10px;
+          display: inline-block;
+          cursor: pointer;
+          &:hover:not(.search) {
+            background-color: rgba(0, 0, 0, .025);
+          }
+        }
+        .search {
+          .searchSelect {
+            width: 0;
+            vertical-align: middle;
+            overflow: hidden;
+            transition: width .3s;
+            &.active {
+              width: 200px;
+            }
+          }
+          .el-input__inner {
+            border-radius: 0;
+            border: 0;
+            padding-right: 0;
+            box-shadow: none !important;
+            border-bottom: 1px solid #dfdfdf;
+            vertical-align: middle;
+          }
+        }
+        .avatar {
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+        }
+      }
     }
   }
 }
