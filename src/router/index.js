@@ -20,6 +20,17 @@ const routes = [
         component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/dashboard')
       }
     ]
+  },
+  {
+    path: '/table',
+    component: layout,
+    children: [
+      {
+        path: '',
+        name: '表格',
+        component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/table')
+      }
+    ]
   }
 ]
 
