@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .login-container {
   .title {
     font-size: 36px;
