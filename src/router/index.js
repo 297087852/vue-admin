@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    hidden: true,
     component: () => import(/* webpackChunkName: 'login' */ '@/views/login')
   },
   {
@@ -17,6 +18,7 @@ const routes = [
       {
         path: '',
         name: '首页',
+        icon: 'menu_dashboard',
         component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/dashboard')
       }
     ]
@@ -28,11 +30,14 @@ const routes = [
       {
         path: '',
         name: '表格',
+        icon: 'menu_table',
         component: () => import(/* webpackChunkName: 'dashboard' */ '@/views/table')
       }
     ]
   }
 ]
+
+export { routes }
 
 const router = new VueRouter({
   mode: 'history',

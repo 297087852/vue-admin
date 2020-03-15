@@ -35,6 +35,10 @@
     }
     .sidebar-menu {
       border: 0;
+      .svg-icon {
+        font-size: 16px;
+        vertical-align: middle;
+      }
       &:not(.el-menu--collapse) {
         width: $--sidebar-open-width;
       }

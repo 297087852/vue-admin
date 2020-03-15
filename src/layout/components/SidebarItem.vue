@@ -2,13 +2,13 @@
   <div v-if="!router.hidden">
     <el-menu-item
       v-if="hasOneShowChildren(router) && !router.dropdown"
-      :index="`${onlyOneChildren.path}`"
+      :index="`${router.path}/${onlyOneChildren.path}`"
     >
       <svg-icon v-if="onlyOneChildren.icon" :iconClass="onlyOneChildren.icon"></svg-icon>
       <span class="sidebar-title" slot='title'>{{onlyOneChildren.name}}</span>
     </el-menu-item>
 
-    <el-submenu v-else :index="router.name">
+    <el-submenu v-else :index="router.path">
       <template slot='title'>
         <svg-icon v-if="router.icon" :iconClass="router.icon"></svg-icon>
         <span class="sidebar-title" slot='title'>{{router.name}}</span>
