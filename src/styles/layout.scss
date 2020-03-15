@@ -60,6 +60,7 @@
   }
 
   .main-container {
+    overflow: auto;
     margin-left: $--sidebar-open-width;
     transition: all .3s;
     // navbar
