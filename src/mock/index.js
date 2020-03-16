@@ -1,9 +1,10 @@
 import Mock from 'mockjs'
-import login from './login'
 
-const mocks = [
-  ...login
-]
+const req = require.context('.', true, /\.js$/)
+const mocks = req.keys()
+  .filter(filePath => filePath !== './index.js')
+  .map(filePath => req(filePath).default)
+  .flat()
 
 mocks.map(item => {
   Mock.mock(new RegExp(item.url), item.methods, item.response)
