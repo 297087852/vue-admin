@@ -8,6 +8,8 @@ import '@/styles/index.scss'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import '@/mock'
+
 Vue.use(ElementUI, { size: 'medium' })
 
 Vue.config.productionTip = false
