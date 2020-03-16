@@ -22,7 +22,12 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
-
-      
+    config.module
+      .rule('eslint')
+      .use('eslint-loader')
+      .tap(option => {
+        option.fix = true
+        return Object.assign(option, { fix: true })
+      })
   }
 }
