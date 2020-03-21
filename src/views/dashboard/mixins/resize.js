@@ -1,3 +1,5 @@
+import { throttle } from '@/utils'
+
 export default {
   mounted () {
     this.initResize()
@@ -9,7 +11,7 @@ export default {
 
   methods: {
     initResize () {
-      window.addEventListener('resize', this.resize)
+      window.addEventListener('resize', throttle(this.resize, 300))
     },
 
     destroyResize () {
