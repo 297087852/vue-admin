@@ -1,10 +1,10 @@
 <template>
-  <div :style="{width: width, height: height}"></div>
+  <div :style="{width, height}"></div>
 </template>
 
 <script>
 import echarts from 'echarts/lib/echarts'
-import Reseze from '../mixins/resize'
+import resize from '../mixins/resize'
 require('echarts/lib/chart/line')
 require('echarts/lib/component/legend')
 require('echarts/lib/component/tooltip')
@@ -13,7 +13,7 @@ require('echarts/theme/macarons') // echarts theme
 export default {
   name: 'LineChart',
 
-  mixins: [Reseze],
+  mixins: [resize],
 
   props: {
     width: {
@@ -68,8 +68,8 @@ export default {
           }
         },
         grid: {
-          left: 10,
-          right: 10,
+          left: 20,
+          right: 20,
           bottom: 20,
           top: 40,
           containLabel: true
