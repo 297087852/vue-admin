@@ -5,6 +5,7 @@ function resolve (dir) {
 }
 
 module.exports = {
+  publicPath: '/',
   lintOnSave: true,
   chainWebpack (config) {
     config.module
