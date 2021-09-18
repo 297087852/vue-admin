@@ -1,6 +1,6 @@
 <template>
   <div>
-    login1
+    login2
   </div>
 </template>
 
